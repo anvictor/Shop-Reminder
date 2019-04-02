@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  //border: solid 1px red;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url('http://webhelp.kiev.ua/Rome_vacation2018_05/Venezia_Rome_20180516_183521_001.jpg');
+  background-color: darkolivegreen;
+  font-family: sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+app-root{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+:root {
+  --color0: #E6E694;
+  --color1: #EC9198;
+  --color2: #6FC48C;
+  --color3: #f79a46;
+  --color4: #bdcfa5;
+  --color5: #ff7f50;
+  --color6: #579ed9;
+  --color7: #ffc107;
+  --color8: #50e9ff;
+  --color-text-dark: #000000;
+  --color-text-light: #E6E694;
+  --color-btnPass: #244f4f;
+  --color-btnAct: #00b0b0;
+  --color-btnDel: #ff002d;
+  --color-btnEdit: #ffe670;
+  --color-btnUse: #2dff79;
+  /*color: var(--color0);*/
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  color: var(--color-text-light);
+  background-color: var(--color-btnPass);
+  width: 75px;
+  height: 27px;
+  border-radius: 30px;
+  outline: none;
+  margin: 7px;
+}
+.titleName{
+  align-self: center;
+  font-weight: 900;
+  margin: -5px;
+}

@@ -1,0 +1,9 @@
+#counter {
+  margin: 10px 0 19px 45px;
+  border-radius: 0;
+  padding: 1px 5px;
+  width: fit-content;
+  font-family: monospace;
+  font-weight: 900;
+  background-color: darkseagreen;
+}

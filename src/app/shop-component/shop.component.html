@@ -1,0 +1,31 @@
+<div id="shopping" style="display: block;">
+  <ul id="listingUL"><p class="titleName">Listing name:</p>
+    <div *ngFor="let item of shopData; let isFirst = first" class="name">
+      <li  *ngIf="isFirst" class="item" [ngStyle] ="{backgroundColor: 'var(--color0', order: 0}">
+        <div class="mainName">
+          <span class="itm">{{item.content.replace('Name:','')}}</span>
+        </div>
+      </li>
+    </div>
+    <div *ngFor="let item of shopData; let isFirst = first" class="body" [ngStyle] ="{margin: item.direction, order: (item.order + 10 * item.done)}">
+    <li *ngIf="!isFirst" class="item" [ngClass] = "{itemCrossedOut: item.done}" [ngStyle] ="{backgroundColor: 'var(--color' + ('' + item.order) + ')'}">
+
+      <div class="main">
+        <span class="itm">{{item.content}}</span>
+        <button (click)="d(item, 9)" class="ok">X</button>
+      </div>
+      <div  class="orderDiv">
+        <button (click)="d(item, 1)" class="orderBtn d1">1</button>
+        <button (click)="d(item, 2)" class="orderBtn d2">2</button>
+        <button (click)="d(item, 3)" class="orderBtn d3">3</button>
+        <button (click)="d(item, 4)" class="orderBtn d4">4</button>
+        <button (click)="d(item, 5)" class="orderBtn d5">5</button>
+        <button (click)="d(item, 6)" class="orderBtn d6">6</button>
+        <button (click)="d(item, 7)" class="orderBtn d7">7</button>
+        <button (click)="d(item, 8)" class="orderBtn d8">8</button>
+      </div>
+    </li>
+    </div>
+
+  </ul>
+</div>

@@ -1,0 +1,18 @@
+<div class="titleLine">
+  <p class="titleName">Old Listings:</p>
+</div>
+<div id="oldDiv">
+
+
+  <div class="oldlist" *ngFor="let old of oldData">
+    <div class="padding" >
+      <div class="btnLine">
+        <button (click)="oldUse(old,  'ok')" class="oldBtn okBtn">ok</button>
+        <button (click)="oldClose(old,  'X')" class="oldBtn xBtn">X</button>
+      </div>
+      <p class="oldName">{{old}}</p>
+    </div>
+  </div>
+
+
+</div>

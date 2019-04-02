@@ -1,0 +1,18 @@
+.lengBtn{
+  margin: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.26);
+  padding: 6px;
+  border-radius: 3px;
+}
+.lengBtn img {
+  margin: 2px;
+  width: 16px;
+}
+
+.lengthLine{
+  display: flex;
+
+}
+
+

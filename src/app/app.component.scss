@@ -1,0 +1,55 @@
+.screenBtn{
+  display: block;
+  color: var(--color-text-light);
+  background-color: var(--color-btnPass);
+  width: 75px;
+  height: 69px;
+  border-radius: 30px;
+  outline: none;
+  margin-bottom: 7px;
+}
+
+.active{
+  display: block;
+  color: var(--color-text-light);
+  background-color: var(--color-btnAct);
+  width: 75px;
+  height: 69px;
+  border-radius: 30px;
+  outline: none;
+  margin-bottom: 7px;
+}
+
+.menu {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -55px;
+}
+
+app-inp-comp{
+  overflow: hidden;
+  border-radius: 15px;
+  width: 90%;
+  height: 230px;
+  align-self: center;
+}
+
+app-help-comp {
+  border-radius: 15px;
+  padding: 7px;
+  background-color: var(--color0);
+}
+.header{
+  display: block;
+  background-color: var(--color-btnPass);
+  color: var(--color-text-light);
+  font-size: 1.5em;
+  margin-top: -9px;
+  padding: 5px 0 5px 15px;
+}
+.clearBtn{
+  align-self: center;
+}
+
+

@@ -1,0 +1,137 @@
+<div id="help">
+  <div class="lengthLine">
+    <div class="lengBtn" (click)="onClickLengBtn('en')">EN<img src="https://lipis.github.io/flag-icon-css/flags/4x3/us.svg" alt="en"></div>
+    <div class="lengBtn" (click)="onClickLengBtn('ua')">UA<img src="https://lipis.github.io/flag-icon-css/flags/4x3/ua.svg" alt="ua"></div>
+    <div class="lengBtn" (click)="onClickLengBtn('ru')" >RU<img src="https://lipis.github.io/flag-icon-css/flags/4x3/ru.svg" alt="ru"></div>
+  </div>
+  <div *ngIf="activeLeng == 'en'">
+    <h2>The most convenient way to enter or sort a To-Do list or purchases. </h2>
+    <ol>
+      <li>
+        Paste and copy of text, or write or dictate the list of items, goods or tasks you want to do.<br>
+        Separate it with commas (,). In the numbers instead commas use only decimal dots.
+      </li>
+      <li>
+         A list of cases (or purchases) will be created at the bottom.<br>
+          All elements will look like colored stripes.<br>
+          Cross out the Done items by pressing the red cross (X).<br>
+          The second click on the cross (X) will make the element not crossed out again.
+      </li>
+      <li>
+        You can sort elements of similar classes by 8 color groups.<br>
+        By clicking the 8 color striker below, assign same colors to similar items.<br>
+        You can reassign again any order class to crossed out element.
+      </li>
+      <li>
+        The first element will be used as the title of the list.<br>
+        EXAMPLE:<br>
+        "buy milk, plant a tree, build a house"<br>
+        The element before the first comma "buy milk," will be the Name of this list. <br>
+        At the same time it will be the first list element.<br>
+        If your device has a speech recognition feature, say the word "comma" after each phrase.<br>
+        Use numbers with a decimal point, not a comma.
+        </li>
+       <li>
+      You can change the Name of the list manually.<br>
+      Write at the beginning of the text the following: <br>
+      <i> Name: Your NewName </i><br>
+      put comma and continue write the list.
+      </li>
+      <li>
+      Clicking on the (Old) button will open the list of old lists.<br>
+      To delete an old list, press (X).<br>
+      To use or edit the old list, click (ok).<br>
+      If you want to make a copy of the old list, change the "Name: _name," to another.<br>
+      Both lists will remain, with the old and the new name.
+      </li>
+    </ol>
+  </div>
+  <div *ngIf="activeLeng == 'ua'">
+    <h2>Найзручніше введення і сортування списку справ або покупок.</h2>
+    <ol>
+      <li>
+        Вставте копію тексту, напишіть або Надиктуйте предмети, товари, або справи, які ви хочете виконати.<br>
+        Розділіть їх комами (,). В числах використовуйте не коми, а точки.
+      </li>
+      <li>
+        Якщо ваш пристрій має функцію розпізнавання мовлення, вимовляйте слово "кома", після кожної фрази. <br>
+        Іноді функція роспізнає тільки "запятая". <br>
+        Це залежить від вашого налаштування. Використовуйте замість чисел з комою, числа з крапкою.
+      </li>
+      <li>
+        Внизу сформувався список справ (або покупок).<br>
+        Всі елементи матимуть вид кольорових планок.<br>
+        Закреслюйте виконані пункти, натискаючи червоний хрестик (Х).<br>
+        Друге натискання на хрестик (Х) зробить елемент знову не закресленим.
+
+      </li>
+      <li>
+        Можна елементи схожих класів впорядкувати за 8 колірними групами.<br>
+        Натискаючи кнопки з номерами кольорів внизу, привласніть подібним елементам однакові кольори-класи.<br>
+        Закресленому елементу можна знову присвоїти будь-який клас сортування натиснувши кольорову кнопку.
+      </li>
+      <li>
+        Перший елемент буде використано в якості заголовка списку.<br>
+        НАПРИКЛАД у тексті:<br>
+        «Вітання, Слава Україні!, Героям Слава!»,<br>
+        Елемент, за яким стоїть перша кома «Вітання,» буде назвою цього списку і одночасно першим елементом.
+      </li>
+      <li>
+        Ви можете змінити назву списку вручну. Для цього на початку тексту напишіть таке:<br>
+        <i>Name: ВашаНоваНазва,</i>
+        поставте кому і далі продовжуйте список, як вам буде зручно.
+      </li>
+      <li>
+        Натискаючи на кнопку (Old), ви відкриєте список старих списків.<br>
+        Для видалення старого списку натисніть (Х).<br>
+        Для використання, або редагування старого списку натисніть (ok).<br>
+        Якщо потрібно зробити копію старого списку змініть йому назву Name: на іншу.<br>
+        Збережуться обидва списки, із старим та з новим ім'ям.
+      </li>
+    </ol>
+  </div>
+  <div *ngIf="activeLeng == 'ru'">
+    <h2>Наиболее быстрый ввод и удобное редактирование списка дел или покупок</h2>
+    <ol>
+      <li>
+        Вставьте копию текста, напишите или надиктуйте предметы, товары или задачи, которые вы хотите исполнить.<br>
+        Разделите их запятыми (,). В числах используйте десятичную точку вместо запятой.
+      </li>
+      <li>
+        Если устройство имеет функцию распознавания речи, произносите слово "запятая", после каждой фразы.<br>
+        Иногда функция распознает только "кома".<br>
+        Это зависит от вашей настройки.
+      </li>
+      <li>
+        Внизу сформировался список дел (или покупок).<br>
+        Все элементы будут иметь вид цветных планок.<br>
+        Зачеркните выполнены пункты, нажимая красный крестик (Х).<br>
+        Второе нажатие на крестик (Х) сделает элемент опять не зачеркнутым.
+      </li>
+      <li>
+        Можно элементы подобных классов отсортировать по 8 цветовыми группами.<br>
+        Нажимая кнопки с номерами цветов внизу, присвойте подобным элементам одинаковые цвета-классы.<br>
+        Меняя у зачеркнутого элемента класс цветовой сортировки, вы делаете его не-зачеркнутым.
+      </li>
+      <li>
+        Первый элемент будет использован в качестве заголовка списка.<br>
+        НАПРИМЕР в тексте:<br>
+        «Я сознаю, что аннексия Крыма и захват Донбасса, это беззаконие»,<br>
+        Элемент за которым стоит первая запятая «Я сознаю,» будет названием этого списка и одновременно первым элементом.
+
+      </li>
+      <li>
+        Вы можете изменить название списка вручную. Для этого в начале текста допишите следующее: <br>
+        <i> Name: ВашеНовоеНазвание </i><br>
+        поставьте запятую и дальше остальной список.
+      </li>
+      <li>
+        Нажимая на кнопку (Old), вы откроете список старых списков.<br>
+        Для удаления старого списка нажмите (Х).<br>
+        Для использования, или изменения старого списка нажмите (ok).<br>
+        Если нужно сделать копию старого списка измените его название Name: на другое.<br>
+        Сохранятся оба списка, со старым и с новым именем.
+      </li>
+    </ol>
+  </div>
+</div>

@@ -1,21 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+  <h6 class="header">{{ title }}</h6>
+<div class="menu">
+  <button *ngIf="activeScreen == 'inp'" class="screenBtn active" (click)="onClickScreenBtn('inp')">Input</button>
+  <button *ngIf="activeScreen != 'inp'" class="screenBtn" (click)="onClickScreenBtn('inp')">Input</button>
 
-<router-outlet></router-outlet>
+  <button *ngIf="activeScreen == 'old'" class="screenBtn active" (click)="onClickScreenBtn('old')">Old</button>
+  <button *ngIf="activeScreen != 'old'" class="screenBtn" (click)="onClickScreenBtn('old')">Old</button>
+  <button *ngIf="activeScreen == 'help'" class="screenBtn active" (click)="onClickScreenBtn('help')">Help</button>
+  <button *ngIf="activeScreen != 'help'" class="screenBtn" (click)="onClickScreenBtn('help')">Help</button>
+</div>
+
+  <app-inp-comp [(listingArea)]="listing" (onlistingAreaChanged)="onlistingAreaChanged($event)" *ngIf="activeScreen == 'inp'"></app-inp-comp>
+  <button class="clearBtn"  *ngIf="activeScreen == 'inp'" (click)="clearList()">Clear</button>
+  <app-shop-comp [(shopData)]="shopData" (ColorBtnClicked)="ColorBtnClicked($event)" *ngIf="(activeScreen == 'shop') || (activeScreen == 'inp')"></app-shop-comp>
+  <app-old-comp [(oldData)]="oldData" (OldClicked)="OldClicked($event)" *ngIf="activeScreen == 'old'"></app-old-comp>
+  <app-help-comp *ngIf="activeScreen == 'help'"></app-help-comp>
+<!--<app-adv-comp *ngIf="activeAdv == 'slp'"></app-adv-comp>-->
+  <app-visited-counter [counter]="counter"></app-visited-counter>
+
